@@ -658,11 +658,11 @@ Algoritmo EJERCICIO_12
 	aprob <- 0;
 	reprob <- 0;
 	prom <- 0;
-	Escribir "---PROGRAMA QUE CALCULA LA CALIFICACI�N BAJA Y ALTA LOS APROBADOS Y REPROBADOS---";
+	Escribir "---PROGRAMA QUE CALCULA LA CALIFICACIÓN BAJA Y ALTA LOS APROBADOS Y REPROBADOS---";
 	Escribir "Ingrese las calificaciones que va a registrar: ";
 	Leer numcal;
 	Mientras (x <= numcal) Hacer
-		Escribir "Ingrese la califcaci�n ",x,": ";
+		Escribir "Ingrese la califcación ",x,": ";
 		Leer calif;
 		Si (calif >= 0 y calif <= 10) Entonces
 			x <- x + 1;
@@ -680,14 +680,14 @@ Algoritmo EJERCICIO_12
 				conReprob <- conReprob + 1;
 			FinSi
 		SiNo
-			Escribir "La calificaci�n que ingresaste debe estar entre 0 y 10";
+			Escribir "La calificación que ingresaste debe estar entre 0 y 10";
 		FinSi
 	FinMientras;
 	prom <- suma / (x - 1);
 	Escribir "------RESULTADOS OBTENIDOS------";
 	Escribir "El promedio es: ",prom;
-	Escribir "La calificaci�n alta fue: ",alta;
-	Escribir "La calificaci�n baja fue: ",baja;
+	Escribir "La calificación alta fue: ",alta;
+	Escribir "La calificación baja fue: ",baja;
 	aprob <- conAprob * 100 / (conAprob + conReprob);
 	reprob <- conReprob * 100 / (conAprob + conReprob);
 	Escribir "El porcentaje de aprobados es de: ",aprob,"%";
@@ -700,7 +700,55 @@ FinAlgoritmo
 <summary>C++</summary>
 
 ```c++
-
+#include<iostream>
+using namespace std;
+void Calificaciones()
+{
+	int x = 1, numcal = 0, calif = 0, suma = 0, baja = 10, alta = 0, conAprob = 0, conReprob = 0;
+	float prom = 0, aprob = 0, reprob = 0;
+	cout<<"\t---PROGRAMA QUE CALCULA LA CALIFICACI�N BAJA Y ALTA LOS APROBADOS Y REPROBADOS---"<<endl;
+	cout<<"Calificaciones a registrar: ";
+	cin>>numcal;
+	while(x <= numcal)
+	{
+		cout<<"Ingrese la calificacion "<<x<<": ";
+		cin>>calif;
+		if(calif >= 0 && calif <= 10)
+		{
+			x += 1;
+			suma += calif;
+			if(calif > alta)
+			alta = calif;
+			if(calif < baja)
+			baja = calif;
+			if(calif >= 6)
+			conAprob += 1;
+			if(calif <= 6)
+			conReprob += 1;
+		}
+		else
+		{
+			cout<<"CALIFICACION INVALIDA"<<endl;
+		    cout<<"!!!INGRESE UNA CALIFICACION ENTRE EL 0 Y 10!!!"<<endl;	
+		}
+	}
+	prom = suma / (x - 1);		
+	system("cls");
+	cout<<"\t---RESULTADOS OBTENIDOS---"<<endl;
+    cout<<"EL PROMEDIO ES: "<<prom<<endl;	
+	cout<<"CALIFICACION ALTA: "<<alta<<endl;	
+	cout<<"CALIFICACION BAJA: "<<baja<<endl;
+	aprob = conAprob * 100 / (conAprob + conReprob);
+	reprob = conReprob * 100 / (conAprob + conReprob);
+	cout<<"PORCENTAJE DE APROBADOS: "<<aprob<<"%"<<endl;
+	cout<<"PORCENTAJE DE REPROBADOS: "<<reprob<<"%"<<endl;
+}
+int main()
+{
+	system("color 0A");
+	Calificaciones();
+	return 0;
+}
 ```
 </details>
 
@@ -749,7 +797,48 @@ FinAlgoritmo
 <summary>C++</summary>
 
 ```c++
-
+#include<iostream>
+using namespace std;
+void GrupoHmbMjr()
+{
+	int x = 1, numpers = 0, masc = 0, fem = 0, sexo = 0;
+	cout<<"\t---PROGRAMA QUE CALCULA CUANTOS HOMBRES Y MUJERES HAY EN GRUPO DE N PERSONAS---"<<endl;
+	cout<<"Ingrese la cantidad de personas: ";
+	cin>>numpers;
+	while(x <= numpers)
+	{
+		cout<<"PERSONA "<<x<<": "<<endl;
+		cout<<"1 = HOMBRE"<<endl;
+		cout<<"2 = MUJER"<<endl;
+		cout<<"Eliga un numero de acuerdo a tu sexo: ";
+		cin>>sexo;
+		//system("cls");
+		if(sexo == 1)
+		masc += 1;
+		else
+		{
+			if(sexo == 2)
+	        fem += 1;
+	        else
+	        {
+	        	cout<<"!!!NO SE ENCONTRO NUMERO INGRESADO!!!"<<endl;
+		        cout<<"INGRESE UN NUMERO EN EL RANGO CORRECTO"<<endl;
+		        x -= 1;
+			}
+		}
+		x += 1;
+	}
+	system("cls");
+	cout<<"\t---RESULTADOS OBTENIDOS---"<<endl;
+    cout<<"CANTIDAD HOMBRES EN EL GRUPO: "<<masc<<endl;	
+	cout<<"CANTIDAD MUJERES EN EL GRUPO: "<<fem<<endl;			
+}
+int main()
+{
+	system("color 0A");
+	GrupoHmbMjr();
+	return 0;
+}
 ```
 </details>
 
@@ -791,7 +880,38 @@ FinAlgoritmo
 <summary>C++</summary>
 
 ```c++
-
+#include<iostream>
+using namespace std;
+void EmpresaSeguros()
+{
+	int numtrab = 0;
+	float sueldo = 0, comision = 0, venta1 = 0, venta2 = 0, venta3 = 0;
+	cout<<"\t---PROGRAMA QUE CALCULA LA CANTIDAD DE DINERO OBTENIDAD DE TRES VENTAS REALIZADAS---"<<endl;
+	cout<<"Cantidad de trabajadores en la empresa: ";
+	cin>>numtrab;
+	for(int x = 1; x <= numtrab; x++)
+	{
+		cout<<"Sueldo base del trabajador: $";
+		cin>>sueldo;
+		cout<<"Ventas del mes: ";
+		cin>>venta1;
+		cout<<"Ventas del mes: ";
+		cin>>venta2;
+		cout<<"Ventas del mes: ";
+		cin>>venta3;
+		comision = (venta1 + venta2 + venta3) * 0.15;
+		cout<<"\t---RESULTADOS OBTENIDOS---"<<endl<<endl;
+        cout<<"SUELDO MENSUAL: $"<<sueldo<<endl<<endl;	
+	    cout<<"COMISION DEL MES: $"<<comision<<endl<<endl;	
+	    cout<<"SUELDO TOTAL CON LA COMISION INCLUIDA: $"<<sueldo + comision<<endl<<endl;
+	}
+}
+int main()
+{
+	system("color 0A");
+	EmpresaSeguros();
+	return 0;
+}
 ```
 </details>
 
@@ -829,7 +949,34 @@ FinAlgoritmo
 <summary>C++</summary>
 
 ```c++
-
+#include<iostream>
+using namespace std;
+void PromedioAlumnos()
+{
+	int x = 1, numalum = 0;
+	float calif = 0, suma = 0, prom = 0;
+	cout<<"\t---PROGRAMA QUE CALCULA EL PROMEDIO DE CALIFICACIONES DE UN GRUPO DE N PERSONAS---"<<endl;
+	cout<<"Cantidad de alumnos: ";
+	cin>>numalum;
+	while(x <= numalum)
+	{
+		cout<<"Ingrese la calificacion "<<x<<": ";
+		cin>>calif;
+		suma += calif;
+		prom = suma / numalum;
+		x += 1;
+	}
+	system("cls");
+	cout<<"\t---RESULTADOS OBTENIDOS---"<<endl;
+	cout<<"PROMEDIO DEL GRUPO: "<<prom<<endl;
+	cout<<"LA SUMA DE LAS CALIFICACIONES ES: "<<suma<<endl;
+}
+int main()
+{
+	system("color 0A");
+	PromedioAlumnos();
+	return 0;
+}
 ```
 </details>
 
@@ -867,7 +1014,33 @@ FinAlgoritmo
 <summary>C++</summary>
 
 ```c++
-
+#include<iostream>
+using namespace std;
+void AprobReprob()
+{
+	int aprob = 0, reprob = 0;
+	float calif = 0;
+	cout<<"\t---PROGRAMA QUE CALCULA EL PORCENTAJE DE APROBADOS Y REPROBADOS---"<<endl;
+	for(int x = 1; x <= 10; x++)
+	{
+		cout<<"Ingrese la calificacion "<<x<<": ";
+		cin>>calif;
+		if(calif <= 6)
+		reprob += 1;
+		else
+		aprob += 1;
+	}
+	system("cls");
+	cout<<"\t---RESULTADOS OBTENIDOS---"<<endl;
+	cout<<"TOTAL DE ALUMNOS APROBADOS: "<<aprob<<endl;
+	cout<<"TOTAL DE ALUMNOS REPROBADOS: "<<reprob<<endl;	
+}
+int main()
+{
+	system("color 0A");
+	AprobReprob();
+	return 0;
+}
 ```
 </details>
 
@@ -917,7 +1090,41 @@ FinAlgoritmo
 <summary>C++</summary>
 
 ```c++
-
+#include<iostream>
+using namespace std;
+void PromMnrMyr()
+{
+	int num = 0, myr = 0, mnr = 0, suma = 0;
+	float prommyr = 0, prommnr = 0;
+	cout<<"\t---PROGRAMA QUE CALCULA EL PROMEDIO DEL VALOR MENOR Y MAYOR DE UN CONJUNTO DE NUMEROS---"<<endl;
+	for(int x = 1; x<= 15; x++)
+	{
+		cout<<"Ingrese el numero "<<x<<": ";
+		cin>>num;
+		if( x == 1)
+		{
+			myr = num;
+			mnr = num;
+		}
+		else
+		if(num > myr)
+		myr += num;
+		if(num < mnr)
+		mnr += num;
+	}
+	prommyr = myr / 15;
+	prommnr = mnr / 15;
+	system("cls");
+	cout<<"\t---RESULTADOS OBTENIDOS---"<<endl;
+	cout<<"PROMEDIO MAYOR DE 15 NUMEROS INGRESADOS: "<<prommyr<<endl;	
+	cout<<"PROMEDIO MENOR DE 15 NUMEROS INGRESADOS: "<<prommnr<<endl;		
+}
+int main()
+{
+	system("color 0A");
+	PromMnrMyr();
+	return 0;
+}
 ```
 </details>
 
@@ -964,7 +1171,44 @@ FinAlgoritmo
 <summary>C++</summary>
 
 ```c++
-
+#include<iostream>
+using namespace std;
+void GrupoHmbMjr()
+{
+	int masc = 0, fem = 0, sexo = 0;
+	cout<<"\t---PROGRAMA QUE CALCULA CUANTOS HOMBRES Y MUJERES HAY EN GRUPO DE 25 PERSONAS---"<<endl;
+	for(int x = 1; x <= 25; x++)
+	{
+		cout<<"PERSONA "<<x<<": "<<endl;
+		cout<<"1 = HOMBRE"<<endl;
+		cout<<"2 = MUJER"<<endl;
+		cout<<"Eliga un numero de acuerdo a tu sexo: ";
+		cin>>sexo;
+		if(sexo == 1)
+		masc += 1;
+		else
+		{
+			if(sexo == 2)
+	        fem += 1;
+	        else
+	        {
+	        	cout<<"!!!NO SE ENCONTRO NUMERO INGRESADO!!!"<<endl;
+		        cout<<"INGRESE UN NUMERO EN EL RANGO CORRECTO"<<endl;
+		        x -= 1;
+			}
+		}
+	}
+	system("cls");
+	cout<<"\t---RESULTADOS OBTENIDOS---"<<endl;
+    cout<<"CANTIDAD HOMBRES EN EL GRUPO: "<<masc<<endl;	
+	cout<<"CANTIDAD MUJERES EN EL GRUPO: "<<fem<<endl;
+}
+int main()
+{
+	system("color 0A");
+	GrupoHmbMjr();
+	return 0;
+}
 ```
 </details>
 
@@ -976,6 +1220,8 @@ FinAlgoritmo
 | 5 o 6  | roja     |
 | 7 o 8  | verde    |
 | 9 o 0  | azul     |
+
+<details>
 <summary>Pseudocódigo</summary>
 
 ```
@@ -991,7 +1237,7 @@ Algoritmo EJERCICIO_19
 	autsazul <- 0;
 	autcolor <- 0;
 	Escribir "---PROGRAMA QUE CALCULA LA CANTIDAD DE AUTOS QUE HAY SEGUN SU PLACA---";
-	Escribir "Ingrese el n�mero de autos a registrar: ";
+	Escribir "Ingrese el número de autos a registrar: ";
 	Leer numautos;
 	Mientras (x <= numautos) Hacer
 		Escribir "!!!DE ACUERDO A LA SIGUIENTE LISTA CON EL ULTIMO DIGITO DE SU PLACA SE PUEDE DETERMINAR EL COLOR!!!";
@@ -1033,7 +1279,49 @@ FinAlgoritmo
 <summary>C++</summary>
 
 ```c++
-
+#include<iostream>
+using namespace std;
+void DeptoPlacas()
+{
+	int numautos = 0, autcolor = 0, autsamarillo = 0, autsrosa = 0, autsrojo = 0, autsverde = 0, autsazul = 0;
+	cout<<"\t---PROGRAMA QUE CALCULA LA CANTIDAD DE AUTOS QUE HAY SEGUN SU PLACA---"<<endl;
+	cout<<"Ingrese el numero de autos a registrar: ";
+	cin>>numautos;
+	for(int x = 1; x <= numautos; x++)
+	{
+		cout<<"!!!DE ACUERDO A LA SIGUIENTE LISTA CON EL ULTIMO DIGITO DE SU PLACA SE PUEDE DETERMINAR EL COLOR!!!"<<endl;
+		cout<<"1 o 2 -> Amarillo"<<endl;
+		cout<<"3 o 4 -> Rosa"<<endl;
+		cout<<"5 o 6 -> Roja"<<endl;
+		cout<<"7 o 8 -> Verde"<<endl;
+		cout<<"9 o 0 -> Azul"<<endl;
+		cout<<"Ingrese el ultimo numero de acuerdo a su placa: ";
+		cin>>autcolor;
+		if(autcolor == 1 || autcolor == 2)
+		autsamarillo += 1;
+		if(autcolor == 3 || autcolor == 4)
+		autsrosa += 1;
+		if(autcolor == 5 || autcolor == 6)
+		autsrojo += 1;
+		if(autcolor == 7 || autcolor == 8)
+		autsverde += 1;
+		if(autcolor == 9 || autcolor == 0)
+		autsazul += 1;
+	}
+	system("cls");
+	cout<<"\t---RESULTADOS OBTENIDOS---"<<endl;
+	cout<<"TOTAL DE AUTOS CON CALCOMANIA AMARILLA: "<<autsamarillo<<endl;	
+	cout<<"TOTAL DE AUTOS CON CALCOMANIA ROSA: "<<autsrosa<<endl;	
+	cout<<"TOTAL DE AUTOS CON CALCOMANIA ROJA: "<<autsrojo<<endl;	
+	cout<<"TOTAL DE AUTOS CON CALCOMANIA VERDE: "<<autsverde<<endl;
+	cout<<"TOTAL DE AUTOS CON CALCOMANIA AZUL: "<<autsazul;		
+}
+int main()
+{
+	system("color 0A");
+	DeptoPlacas();
+	return 0;
+}
 ```
 </details>
 
@@ -1084,7 +1372,46 @@ FinAlgoritmo
 <summary>C++</summary>
 
 ```c++
-
+#include<iostream>
+using namespace std;
+void SalarioObrero()
+{
+	int hrstrab = 0, hrsextras = 0, hrstriple = 0, numsobr = 0;
+	float pagohrs = 0, sueldo = 0;
+	cout<<"\t---PROGRAMA QUE CALCULA LA CANTIDAD SEMANAL DE DINERO---"<<endl;
+	cout<<"Ingrese la cantidad de obreros: ";
+	cin>>numsobr;
+	for(int x = 1; x <= numsobr; x++)
+	{
+		cout<<"Obrero "<<x<<": "<<endl;
+		cout<<"Ingrese sus horas trabajadas a la semana: ";
+	    cin>>hrstrab;
+	    cout<<"Ingrese el pago por hora: $";
+	    cin>>pagohrs;
+	    system("cls");
+	    if(hrstrab > 40)
+	    {
+		    hrsextras = hrstrab - 40;
+		    if(hrsextras > 8)
+		    {
+			    hrstriple = hrsextras - 8;
+		        sueldo = (40 * pagohrs) + (8 * pagohrs * 2) + (hrstriple * pagohrs * 3);
+		    }
+		    else
+		    sueldo = (40 * pagohrs) + (hrsextras * pagohrs * 2);
+	    }
+	    else
+	    sueldo = hrstrab * pagohrs;		
+	}
+	cout<<"\t---RESULTADOS OBTENIDOS---"<<endl;
+	cout<<"LA CANTIDAD SEMANAL DE DINERO A RECIBIR POR "<<hrstrab<<" HORAS TRABAJADAS ES DE: $"<<sueldo;
+}
+int main()
+{
+	system("color 0A");
+	SalarioObrero();
+	return 0;
+}
 ```
 </details>
 
@@ -1138,7 +1465,46 @@ FinProceso
 <summary>C++</summary>
 
 ```c++
-
+#include<iostream>
+using namespace std;
+void MuestreoPeso()
+{
+	int edad = 0;
+	float peso = 0, prominfan = 0, promjoven = 0, promadul = 0, promviejos = 0;
+	cout<<"\t---PROGRAMA QUE CALCULA EL PROMEDIO DE PESO---"<<endl;
+	for(int x = 1; x <= 10; x++)
+	{
+		cout<<"Persona "<<x<<": "<<endl;
+	    cout<<"Ingrese su edad: ";
+	    cin>>edad;
+		cout<<"Ingrese su peso: ";	
+		cin>>peso;
+		if(edad >= 0 && edad <= 12)
+		prominfan += peso;
+		if(edad >= 13 && edad <= 29)
+		promjoven  += peso;
+		if(edad >= 30 && edad <= 59)
+		promadul += peso;
+		if(edad >= 60)
+		promviejos += peso;
+	}
+	prominfan = 100.0 * (prominfan / 10);
+	promjoven = 100.0 * (promjoven / 10);
+	promadul = 100.0 * (promadul / 10);
+	promviejos = 100.0 * (promviejos / 10);
+	system("cls");
+	cout<<"\t---RESULTADOS OBTENIDOS---"<<endl;
+	cout<<"PROMEDIO DE LOS INFANTES: "<<prominfan<<endl;
+	cout<<"PROMEDIO DE LOS JOVENES: "<<promjoven<<endl;
+	cout<<"PROMEDIO DE LOS ADULTOS: "<<promadul<<endl;
+	cout<<"PROMEDIO DE LOS ADULTOS MAYORES: "<<promviejos;
+}
+int main()
+{
+	system("color 0A");
+	MuestreoPeso();
+	return 0;
+}
 ```
 </details>
 
