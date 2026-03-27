@@ -4,7 +4,7 @@
 
 # 📑 Ejercicios disponibles
 - [Ejercicios de Programación ](basic-exercises.md)
-    - [Logica de Programación Básica](simple-data-type-exercises.md)
+    - [Logica de Programación Básica](basic-programming-logic.md)
     - [Condicionales](conditional-exercises.md)
     - [Bucles](loops-exercises.md)
 

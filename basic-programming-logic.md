@@ -141,7 +141,7 @@ Algoritmo Cuadrado
 
     cuadrado <- num * num;
 
-    Escribir "Cuadrado:", cuadrado
+    Escribir "Cuadrado:", cuadrado;
 FinAlgoritmo
 ```
 </details>
@@ -182,7 +182,7 @@ print("Cuadrado:", num**2)
 
 ```
 Algoritmo Descuento15
-    Definir costo, descuento, total Como Real
+    Definir costo, descuento, total Como Real;
 
     Escribir "Ingresa el costo del producto: ";
     Leer costo;
@@ -903,7 +903,21 @@ print("Cambio: $:", cambio)
 <summary>Pseudocódigo</summary>
 
 ```
+Algoritmo Inversion3Anios
+    Definir capital, interes, total Como Real;
+    Definir meses Como Entero;
 
+    Escribir "Ingresa capital: ";
+    Leer capital;
+
+    meses <- 36;
+
+    interes <- capital * 0.03 * meses;
+    total <- capital + interes;
+
+    Escribir "Interes: ", interes;
+    Escribir "Total final: ", total;
+FinAlgoritmo
 ```
 </details>
 
@@ -911,7 +925,24 @@ print("Cambio: $:", cambio)
 <summary>C++</summary>
 
 ```C++
+#include<iostream>
+using namespace std;
 
+int main() {
+    float capital, interes, total;
+    int meses = 36;
+
+    cout << "Ingresa capital: ";
+    cin >> capital;
+
+    interes = capital * 0.03 * meses;
+    total = capital + interes;
+
+    cout << "Interes: $" << interes << endl;
+    cout << "Total final: $" << total;
+
+    return 0;
+}
 ```
 </details> 
 
@@ -919,7 +950,15 @@ print("Cambio: $:", cambio)
 <summary>Python</summary>
 
 ```Python
+capital = float(input("Ingresa capital: "))
 
+meses = 36
+
+interes = capital * 0.03 * meses
+total = capital + interes
+
+print("Interes:", interes)
+print("Total final:", total)
 ```
 </details>
 
@@ -928,7 +967,21 @@ print("Cambio: $:", cambio)
 <summary>Pseudocódigo</summary>
 
 ```
+Algoritmo Vendedor
+    Definir sueldo, v1, v2, v3, comision, total Como Real;
 
+    Escribir "Ingresa sueldo base: ";
+    Leer sueldo;
+
+    Escribir "Ingresa ventas: ";
+    Leer v1, v2, v3;
+
+    comision <- (v1 + v2 + v3) * 0.10;
+    total <- sueldo + comision;
+
+    Escribir "Comision:", comision;
+    Escribir "Total a recibir:", total;
+FinAlgoritmo
 ```
 </details>
 
@@ -936,7 +989,26 @@ print("Cambio: $:", cambio)
 <summary>C++</summary>
 
 ```C++
+#include<iostream>
+using namespace std;
 
+int main() {
+    float sueldo, v1, v2, v3, comision, total;
+
+    cout << "Ingrese sueldo base: ";
+    cin >> sueldo;
+
+    cout << "Ingrese ventas: ";
+    cin >> v1 >> v2 >> v3;
+
+    comision = (v1 + v2 + v3) * 0.10;
+    total = sueldo + comision;
+
+    cout << "Comision: $" << comision << endl;
+    cout << "Total a recibir: $" << total;
+
+    return 0;
+}
 ```
 </details>
 
@@ -944,7 +1016,17 @@ print("Cambio: $:", cambio)
 <summary>Python</summary>
 
 ```Python
+sueldo = float(input("Ingrese sueldo base: "))
 
+v1 = float(input("Venta 1: "))
+v2 = float(input("Venta 2: "))
+v3 = float(input("Venta 3: "))
+
+comision = (v1 + v2 + v3) * 0.10
+total = sueldo + comision
+
+print("Comision:", comision)
+print("Total a recibir:", total)
 ```
 </details>
 
@@ -1087,7 +1169,20 @@ print("Porcentaje 3:", (i3*100)/total)
 <summary>Pseudocódigo</summary>
 
 ```
+Algoritmo Garrafones
+    Definir cantidad, total, descuento, total_final Como Real;
 
+    Escribir "Ingresa cantidad de garrafones: ";
+    Leer cantidad;
+
+    total <- cantidad * 12;
+    descuento <- total * 0.25;
+    total_final <- total - descuento;
+
+    Escribir "Total sin descuento:", total;
+    Escribir "Descuento:", descuento;
+    Escribir "Total a pagar:", total_final;
+FinAlgoritmo
 ```
 </details>
 
@@ -1095,7 +1190,26 @@ print("Porcentaje 3:", (i3*100)/total)
 <summary>C++</summary>
 
 ```C++
+#include<iostream>
+using namespace std;
 
+int main() {
+    int cantidad;
+    float total, descuento, total_final;
+
+    cout << "Ingresa cantidad de garrafones: ";
+    cin >> cantidad;
+
+    total = cantidad * 12;
+    descuento = total * 0.25;
+    total_final = total - descuento;
+
+    cout << "Total sin descuento: $" << total << endl;
+    cout << "Descuento: $" << descuento << endl;
+    cout << "Total a pagar: $" << total_final;
+
+    return 0;
+}
 ```
 </details>
 
@@ -1103,7 +1217,15 @@ print("Porcentaje 3:", (i3*100)/total)
 <summary>Python</summary>
 
 ```Python
+cantidad = int(input("Ingrese cantidad de garrafones: "))
 
+total = cantidad * 12
+descuento = total * 0.25
+total_final = total - descuento
+
+print("Total sin descuento:", total)
+print("Descuento:", descuento)
+print("Total a pagar:", total_final)
 ```
 </details>
 
