@@ -1,4 +1,45 @@
-<h1 align="center">EJERCICIOS DE BUCLES</h1>
+<h1 align="center">EJERCICIOS DE BUCLES EN PROGRAMACIÓN</h1>
+
+Este repositorio contiene una colección de ejercicios enfocados exclusivamente en el uso de estructuras repetitivas (bucles), implementados en:
+
+- Pseudocódigo
+- C++
+- Python
+
+**Contenido**
+Los ejercicios incluyen:
+- Lectura de múltiples datos
+- Suma de valores (acumuladores)
+- Conteo de ocurrencias (contadores)
+- Uso de valores centinela
+- Procesamiento de datos en secuencia
+- Cálculo de promedios
+- Clasificación de datos dentro de un ciclo
+
+**Tipos de Bucles Utilizados**
+- Para ```(for)```
+Se utiliza cuando se conoce la cantidad de repeticiones.
+- Mientras ```(while)```
+Se utiliza cuando no se conoce cuántas veces se repetirá el proceso.
+- Repetir ```(do-while)```
+Se utiliza cuando el bloque debe ejecutarse al menos una vez.
+
+**Conceptos Clave**
+Durante estos ejercicios se aplican:
+- Acumuladores ```(suma = suma + valor)```
+- Contadores ```(contador = contador + 1)```
+- Condiciones dentro de bucles
+- Validación de datos
+- Control de flujo
+
+**Objetivo**
+Fortalecer la lógica de programación mediante el uso de bucles para:
+- Repetir procesos
+- Procesar múltiples datos
+- Resolver problemas de manera estructurada
+
+**Nota**
+Todos los ejercicios mantienen la misma lógica en los tres lenguajes, cambiando únicamente la sintaxís.
 
 ---
 
@@ -957,7 +998,34 @@ print("% Reprobados:", (reprobados*100)/n)
 <summary>Pseudocódigo</summary>
 
 ```
+Algoritmo ContarGenero
+    Definir n, i Como Entero;
+    Definir genero Como Caracter;
+    Definir hombres, mujeres Como Entero;
 
+    hombres <- 0;
+    mujeres <- 0;
+    i <- 1;
+
+    Escribir "Ingresa cantidad de personas: ";
+    Leer n;
+
+    Mientras i <= n Hacer
+        Escribir "Ingrese genero (H/M): ";
+        Leer genero;
+
+        Si genero = "H" Entonces
+            hombres <- hombres + 1;
+        SiNo
+            mujeres <- mujeres + 1;
+        FinSi
+
+        i <- i + 1;
+    FinMientras
+
+    Escribir "Hombres: ", hombres;
+    Escribir "Mujeres: ", mujeres;
+FinAlgoritmo
 ```
 </details>
 
@@ -965,7 +1033,33 @@ print("% Reprobados:", (reprobados*100)/n)
 <summary>C++</summary>
 
 ```C++
+#include<iostream>
+using namespace std;
 
+int main() {
+    int n, i = 1, hombres = 0, mujeres = 0;
+    char genero;
+
+    cout << "Cantidad de personas: ";
+    cin >> n;
+
+    while(i <= n) {
+        cout << "Genero (H/M): ";
+        cin >> genero;
+
+        if(genero == 'H' || genero == 'h')
+            hombres++;
+        else
+            mujeres++;
+
+        i++;
+    }
+
+    cout << "Hombres: " << hombres << endl;
+    cout << "Mujeres: " << mujeres;
+
+    return 0;
+}
 ```
 </details>
 
@@ -973,7 +1067,24 @@ print("% Reprobados:", (reprobados*100)/n)
 <summary>Python</summary>
 
 ```Python
+n = int(input("Cantidad de personas: "))
 
+i = 1
+hombres = 0
+mujeres = 0
+
+while i <= n:
+    genero = input("Genero (H/M): ").lower()
+
+    if genero == "h":
+        hombres += 1
+    else:
+        mujeres += 1
+
+    i += 1
+
+print("Hombres: ", hombres)
+print("Mujeres: ", mujeres)
 ```
 </details>
 
@@ -1135,7 +1246,7 @@ print("% Reprobados:", (reprobados*100)/n)
 ```
 </details>
 
-##### Ejercicio 20. Una compañía de seguros tiene contratados a N vendedores. Cada uno hace 3 ventas a la semana. Su política de pagos es que un vendedor recibe un sueldo base, y un 15% extra por comisiones de sus ventas. El gerente de su compañía desea saber cuánto dinero obtendrá en la semana cada vendedor por concepto de comisiones por las 3 ventas realizadas, y cuanto tomando en cuenta su sueldo base y sus comisiones
+##### Ejercicio 20. Determinar la cantidad semanal de dinero que recibirá cada uno de los N obreros de una empresa. Se sabe que cuando las horas que trabajo un obrero exceden de 40, el resto se convierte en horas extras que se pagan al doble de una hora normal, cuando no exceden de 8; cuando las horas extras exceden de 8 se pagan las primeras 8 al doble de lo que se paga por una hora normal y el resto al triple
 <details>
 <summary>Pseudocódigo</summary>
 
@@ -1160,32 +1271,7 @@ print("% Reprobados:", (reprobados*100)/n)
 ```
 </details>
 
-##### Ejercicio 21. Determinar la cantidad semanal de dinero que recibirá cada uno de los N obreros de una empresa. Se sabe que cuando las horas que trabajo un obrero exceden de 40, el resto se convierte en horas extras que se pagan al doble de una hora normal, cuando no exceden de 8; cuando las horas extras exceden de 8 se pagan las primeras 8 al doble de lo que se paga por una hora normal y el resto al triple
-<details>
-<summary>Pseudocódigo</summary>
-
-```
-
-```
-</details>
-
-<details>
-<summary>C++</summary>
-
-```C++
-
-```
-</details>
-
-<details>
-<summary>Python</summary>
-
-```Python
-
-```
-</details>
-
-##### Ejercicio 22. Una persona debe realizar un muestreo con 10 personas para determinar el promedio de peso de los niños, jóvenes, adultos y viejos que existen en su zona habitacional. Se determinan las categorías con base en la siguiente tabla:
+##### Ejercicio 21. Una persona debe realizar un muestreo con 10 personas para determinar el promedio de peso de los niños, jóvenes, adultos y viejos que existen en su zona habitacional. Se determinan las categorías con base en la siguiente tabla:
 | CATEGORIA |   EDAD         |
 | :---:     | :---:          |  
 | Niños     | 0 - 12         |
@@ -1196,7 +1282,60 @@ print("% Reprobados:", (reprobados*100)/n)
 <summary>Pseudocódigo</summary>
 
 ```
-
+Algoritmo PromedioPesos
+    Definir edad Como Entero;
+    Definir peso Como Real;
+    Definir i Como Entero;
+	
+    Definir sumaN, sumaJ, sumaA, sumaV Como Real;
+    Definir contN, contJ, contA, contV Como Entero;
+	
+    sumaN <- 0; sumaJ <- 0; sumaA <- 0; sumaV <- 0;
+    contN <- 0; contJ <- 0; contA <- 0; contV <- 0;
+	
+    Para i <- 1 Hasta 10 Hacer
+		
+		Escribir "Edad: ";
+		Leer edad;
+		Escribir "Peso: ";
+		Leer peso;
+		
+		Si edad >= 0 Y edad <= 12 Entonces
+			sumaN <- sumaN + peso;
+			contN <- contN + 1;
+			
+		SiNo
+			Si edad <= 29 Entonces
+				sumaJ <- sumaJ + peso;
+				contJ <- contJ + 1;
+				
+			SiNo
+				Si edad <= 59 Entonces
+					sumaA <- sumaA + peso;
+					contA <- contA + 1;
+					
+				SiNo
+					sumaV <- sumaV + peso;
+					contV <- contV + 1;
+				FinSi
+			FinSi
+		FinSi
+		
+	FinPara
+	
+    Si contN > 0 Entonces
+        Escribir "Promedio niños: ", sumaN / contN;
+    FinSi
+    Si contJ > 0 Entonces
+        Escribir "Promedio jovenes:", sumaJ / contJ;
+    FinSi
+    Si contA > 0 Entonces
+        Escribir "Promedio adultos:", sumaA / contA;
+    FinSi
+    Si contV > 0 Entonces
+        Escribir "Promedio viejos:", sumaV / contV;
+    FinSi
+FinAlgoritmo
 ```
 </details>
 
@@ -1204,7 +1343,47 @@ print("% Reprobados:", (reprobados*100)/n)
 <summary>C++</summary>
 
 ```C++
+#include<iostream>
+using namespace std;
 
+int main() {
+    int edad;
+    float peso;
+
+    float sumaN=0, sumaJ=0, sumaA=0, sumaV=0;
+    int contN=0, contJ=0, contA=0, contV=0;
+
+    for(int i = 1; i <= 10; i++) {
+        cout << "Edad: ";
+        cin >> edad;
+        cout << "Peso: ";
+        cin >> peso;
+
+        if(edad >= 0 && edad <= 12) {
+            sumaN += peso;
+            contN++;
+        }
+        else if(edad <= 29) {
+            sumaJ += peso;
+            contJ++;
+        }
+        else if(edad <= 59) {
+            sumaA += peso;
+            contA++;
+        }
+        else {
+            sumaV += peso;
+            contV++;
+        }
+    }
+
+    if(contN > 0) cout << "Promedio niños: " << sumaN/contN << endl;
+    if(contJ > 0) cout << "Promedio jovenes: " << sumaJ/contJ << endl;
+    if(contA > 0) cout << "Promedio adultos: " << sumaA/contA << endl;
+    if(contV > 0) cout << "Promedio viejos: " << sumaV/contV << endl;
+
+    return 0;
+}
 ```
 </details>
 
@@ -1212,6 +1391,33 @@ print("% Reprobados:", (reprobados*100)/n)
 <summary>Python</summary>
 
 ```Python
+sumaN = sumaJ = sumaA = sumaV = 0
+contN = contJ = contA = contV = 0
 
+for i in range(10):
+    edad = int(input("Edad: "))
+    peso = float(input("Peso: "))
+
+    if 0 <= edad <= 12:
+        sumaN += peso
+        contN += 1
+    elif edad <= 29:
+        sumaJ += peso
+        contJ += 1
+    elif edad <= 59:
+        sumaA += peso
+        contA += 1
+    else:
+        sumaV += peso
+        contV += 1
+
+if contN > 0:
+    print("Promedio niños:", sumaN/contN)
+if contJ > 0:
+    print("Promedio jovenes:", sumaJ/contJ)
+if contA > 0:
+    print("Promedio adultos:", sumaA/contA)
+if contV > 0:
+    print("Promedio viejos:", sumaV/contV)
 ```
 </details>
