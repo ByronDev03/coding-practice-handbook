@@ -1098,7 +1098,27 @@ print("Mujeres: ", mujeres)
 <summary>Pseudocódigo</summary>
 
 ```
+Algoritmo Vendedores
+    Definir n, i Como Entero;
+    Definir sueldo, v1, v2, v3, comision, total Como Real;
 
+    Escribir "Ingresa numero de vendedores: ";
+    Leer n;
+
+    Para i <- 1 Hasta n Hacer
+        Escribir "Sueldo base: ";
+        Leer sueldo;
+
+        Escribir "Ventas: ";
+        Leer v1, v2, v3;
+
+        comision <- (v1 + v2 + v3) * 0.15;
+        total <- sueldo + comision;
+
+        Escribir "Comision: ", comision;
+        Escribir "Total a recibir: ", total;
+    FinPara
+FinAlgoritmo
 ```
 </details>
 
@@ -1106,7 +1126,34 @@ print("Mujeres: ", mujeres)
 <summary>C++</summary>
 
 ```C++
+#include<iostream>
+using namespace std;
 
+int main() {
+    int n;
+    float sueldo, v1, v2, v3, comision, total;
+
+    cout << "Numero de vendedores: ";
+    cin >> n;
+
+    for(int i = 1; i <= n; i++) {
+        cout << "\nVendedor " << i << endl;
+
+        cout << "Sueldo base: ";
+        cin >> sueldo;
+
+        cout << "Ventas: ";
+        cin >> v1 >> v2 >> v3;
+
+        comision = (v1 + v2 + v3) * 0.15;
+        total = sueldo + comision;
+
+        cout << "Comision: $" << comision << endl;
+        cout << "Total: $" << total << endl;
+    }
+
+    return 0;
+}
 ```
 </details>
 
@@ -1114,7 +1161,22 @@ print("Mujeres: ", mujeres)
 <summary>Python</summary>
 
 ```Python
+n = int(input("Numero de vendedores: "))
 
+for i in range(n):
+    print(f"\nVendedor {i+1}")
+
+    sueldo = float(input("Sueldo base: "))
+
+    v1 = float(input("Venta 1: "))
+    v2 = float(input("Venta 2: "))
+    v3 = float(input("Venta 3: "))
+
+    comision = (v1 + v2 + v3) * 0.15
+    total = sueldo + comision
+
+    print("Comision:", comision)
+    print("Total a recibir:", total)
 ```
 </details>
 
@@ -1123,7 +1185,30 @@ print("Mujeres: ", mujeres)
 <summary>Pseudocódigo</summary>
 
 ```
+Algoritmo PromedioAlumnos
+    Definir n, i Como Entero;
+    Definir nota, suma, promedio Como Real;
 
+    suma <- 0;
+    i <- 1;
+
+    Escribir "Cantidad de alumnos: ";
+    Leer n;
+
+    Mientras i <= n Hacer
+        Escribir "Ingrese calificacion: ";
+        Leer nota;
+
+        suma <- suma + nota;
+
+        i <- i + 1;
+    FinMientras
+
+    promedio <- suma / n;
+
+    Escribir "Suma:", suma;
+    Escribir "Promedio:", promedio;
+FinAlgoritmo
 ```
 </details>
 
@@ -1131,7 +1216,31 @@ print("Mujeres: ", mujeres)
 <summary>C++</summary>
 
 ```C++
+#include<iostream>
+using namespace std;
 
+int main() {
+    int n, i = 1;
+    float nota, suma = 0, promedio;
+
+    cout << "Cantidad de alumnos: ";
+    cin >> n;
+
+    while(i <= n) {
+        cout << "Nota: ";
+        cin >> nota;
+
+        suma += nota;
+        i++;
+    }
+
+    promedio = suma / n;
+
+    cout << "Suma: " << suma << endl;
+    cout << "Promedio: " << promedio;
+
+    return 0;
+}
 ```
 </details>
 
@@ -1139,7 +1248,20 @@ print("Mujeres: ", mujeres)
 <summary>Python</summary>
 
 ```Python
+n = int(input("Cantidad de alumnos: "))
 
+i = 1
+suma = 0
+
+while i <= n:
+    nota = float(input("Nota: "))
+    suma += nota
+    i += 1
+
+promedio = suma / n
+
+print("Suma:", suma)
+print("Promedio:", promedio)
 ```
 </details>
 
@@ -1148,7 +1270,27 @@ print("Mujeres: ", mujeres)
 <summary>Pseudocódigo</summary>
 
 ```
+Algoritmo AprobadosReprobados
+    Definir nota Como Real;
+    Definir aprobados, reprobados, i Como Entero;
 
+    aprobados <- 0;
+    reprobados <- 0;
+
+    Para i <- 1 Hasta 10 Hacer
+        Escribir "Ingrese nota: ";
+        Leer nota;
+
+        Si nota >= 6 Entonces
+            aprobados <- aprobados + 1;
+        SiNo
+            reprobados <- reprobados + 1;
+        FinSi
+    FinPara
+
+    Escribir "% Aprobados:", (aprobados*100)/10;
+    Escribir "% Reprobados:", (reprobados*100)/10;
+FinAlgoritmo
 ```
 </details>
 
@@ -1156,7 +1298,28 @@ print("Mujeres: ", mujeres)
 <summary>C++</summary>
 
 ```C++
+#include<iostream>
+using namespace std;
 
+int main() {
+    float nota;
+    int aprobados = 0, reprobados = 0;
+
+    for(int i = 1; i <= 10; i++) {
+        cout << "Nota: ";
+        cin >> nota;
+
+        if(nota >= 6)
+            aprobados++;
+        else
+            reprobados++;
+    }
+
+    cout << "% Aprobados: " << (aprobados*100.0)/10 << endl;
+    cout << "% Reprobados: " << (reprobados*100.0)/10;
+
+    return 0;
+}
 ```
 </details>
 
@@ -1164,7 +1327,19 @@ print("Mujeres: ", mujeres)
 <summary>Python</summary>
 
 ```Python
+aprobados = 0
+reprobados = 0
 
+for i in range(10):
+    nota = float(input("Nota: "))
+
+    if nota >= 6:
+        aprobados += 1
+    else:
+        reprobados += 1
+
+print("% Aprobados:", (aprobados*100)/10)
+print("% Reprobados:", (reprobados*100)/10)
 ```
 </details>
 
@@ -1173,7 +1348,37 @@ print("Mujeres: ", mujeres)
 <summary>Pseudocódigo</summary>
 
 ```
+Algoritmo Estadisticas
+    Definir num, suma, mayor, menor Como Real;
+    Definir i Como Entero;
 
+    suma <- 0;
+    i <- 1;
+
+    Repetir
+        Escribir "Ingrese numero: ";
+        Leer num;
+
+        Si i = 1 Entonces
+            mayor <- num;
+            menor <- num;
+        SiNo
+            Si num > mayor Entonces
+                mayor <- num;
+            FinSi
+            Si num < menor Entonces
+                menor <- num;
+            FinSi
+        FinSi
+
+        suma <- suma + num;
+        i <- i + 1;
+    Hasta Que i > 15
+
+    Escribir "Promedio:", suma / 15;
+    Escribir "Mayor:", mayor;
+    Escribir "Menor:", menor;
+FinAlgoritmo
 ```
 </details>
 
@@ -1181,7 +1386,35 @@ print("Mujeres: ", mujeres)
 <summary>C++</summary>
 
 ```C++
+#include<iostream>
+using namespace std;
 
+int main() {
+    float num, suma = 0, mayor, menor;
+    int i = 1;
+
+    do {
+        cout << "Numero: ";
+        cin >> num;
+
+        if(i == 1) {
+            mayor = menor = num;
+        } else {
+            if(num > mayor) mayor = num;
+            if(num < menor) menor = num;
+        }
+
+        suma += num;
+        i++;
+
+    } while(i <= 15);
+
+    cout << "Promedio: " << suma / 15 << endl;
+    cout << "Mayor: " << mayor << endl;
+    cout << "Menor: " << menor;
+
+    return 0;
+}
 ```
 </details>
 
@@ -1189,7 +1422,29 @@ print("Mujeres: ", mujeres)
 <summary>Python</summary>
 
 ```Python
+i = 1
+suma = 0
 
+while True:
+    num = float(input("Numero: "))
+
+    if i == 1:
+        mayor = menor = num
+    else:
+        if num > mayor:
+            mayor = num
+        if num < menor:
+            menor = num
+
+    suma += num
+    i += 1
+
+    if i > 15:
+        break
+
+print("Promedio: ", suma / 15)
+print("Mayor: ", mayor)
+print("Menor: ", menor)
 ```
 </details>
 
@@ -1198,7 +1453,27 @@ print("Mujeres: ", mujeres)
 <summary>Pseudocódigo</summary>
 
 ```
+Algoritmo Grupo25
+    Definir genero Como Caracter;
+    Definir hombres, mujeres, i Como Entero;
 
+    hombres <- 0;
+    mujeres <- 0;
+
+    Para i <- 1 Hasta 25 Hacer
+        Escribir "Genero (H/M): ";
+        Leer genero;
+
+        Si genero = "H" Entonces
+            hombres <- hombres + 1;
+        SiNo
+            mujeres <- mujeres + 1;
+        FinSi
+    FinPara
+
+    Escribir "Hombres: ", hombres;
+    Escribir "Mujeres: ", mujeres;
+FinAlgoritmo
 ```
 </details>
 
@@ -1206,7 +1481,28 @@ print("Mujeres: ", mujeres)
 <summary>C++</summary>
 
 ```C++
+#include<iostream>
+using namespace std;
 
+int main() {
+    char genero;
+    int hombres = 0, mujeres = 0;
+
+    for(int i = 1; i <= 25; i++) {
+        cout << "Genero (H/M): ";
+        cin >> genero;
+
+        if(genero == 'H' || genero == 'h')
+            hombres++;
+        else
+            mujeres++;
+    }
+
+    cout << "Hombres: " << hombres << endl;
+    cout << "Mujeres: " << mujeres;
+
+    return 0;
+}
 ```
 </details>
 
@@ -1214,7 +1510,19 @@ print("Mujeres: ", mujeres)
 <summary>Python</summary>
 
 ```Python
+hombres = 0
+mujeres = 0
 
+for i in range(25):
+    genero = input("Genero (H/M): ").lower()
+
+    if genero == "h":
+        hombres += 1
+    else:
+        mujeres += 1
+
+print("Hombres: ", hombres)
+print("Mujeres: ", mujeres)
 ```
 </details>
 
@@ -1231,7 +1539,48 @@ print("Mujeres: ", mujeres)
 <summary>Pseudocódigo</summary>
 
 ```
-
+Algoritmo Calcomanias
+    Definir n, i, digito Como Entero;
+    Definir amarilla, rosa, roja, verde, azul Como Entero;
+	
+    amarilla <- 0;
+    rosa <- 0;
+    roja <- 0;
+    verde <- 0;
+    azul <- 0;
+	
+    Escribir "Cantidad de autos: ";
+    Leer n;
+	
+    Para i <- 1 Hasta n Hacer
+        Escribir "Ingrese ultimo digito:" ;
+        Leer digito;
+		
+        Si digito = 1 O digito = 2 Entonces
+            amarilla <- amarilla + 1;
+		Sino
+			Si digito = 3 O digito = 4 Entonces
+				rosa <- rosa + 1;
+		Sino
+			Si digito = 5 O digito = 6 Entonces
+				roja <- roja + 1;
+			Sino 
+				Si digito = 7 O digito = 8 Entonces
+					verde <- verde + 1;
+				SiNo
+					azul <- azul + 1;
+				FinSi
+			FinSi
+		FinSi
+	FinSi
+    FinPara
+	
+    Escribir "Amarilla: ", amarilla;
+    Escribir "Rosa: ", rosa;
+    Escribir "Roja: ", roja;
+    Escribir "Verde: ", verde;
+    Escribir "Azul: ", azul;
+FinAlgoritmo
 ```
 </details>
 
@@ -1239,7 +1588,40 @@ print("Mujeres: ", mujeres)
 <summary>C++</summary>
 
 ```C++
+#include<iostream>
+using namespace std;
 
+int main() {
+    int n, digito;
+    int amarilla=0, rosa=0, roja=0, verde=0, azul=0;
+
+    cout << "Cantidad de autos: ";
+    cin >> n;
+
+    for(int i = 1; i <= n; i++) {
+        cout << "Ultimo digito: ";
+        cin >> digito;
+
+        if(digito == 1 || digito == 2)
+            amarilla++;
+        else if(digito == 3 || digito == 4)
+            rosa++;
+        else if(digito == 5 || digito == 6)
+            roja++;
+        else if(digito == 7 || digito == 8)
+            verde++;
+        else
+            azul++;
+    }
+
+    cout << "Amarilla: " << amarilla << endl;
+    cout << "Rosa: " << rosa << endl;
+    cout << "Roja: " << roja << endl;
+    cout << "Verde: " << verde << endl;
+    cout << "Azul: " << azul;
+
+    return 0;
+}
 ```
 </details>
 
@@ -1247,7 +1629,29 @@ print("Mujeres: ", mujeres)
 <summary>Python</summary>
 
 ```Python
+n = int(input("Cantidad de autos: "))
 
+amarilla = rosa = roja = verde = azul = 0
+
+for i in range(n):
+    digito = int(input("Ultimo digito: "))
+
+    if digito in [1, 2]:
+        amarilla += 1
+    elif digito in [3, 4]:
+        rosa += 1
+    elif digito in [5, 6]:
+        roja += 1
+    elif digito in [7, 8]:
+        verde += 1
+    else:
+        azul += 1
+
+print("Amarilla: ", amarilla)
+print("Rosa: ", rosa)
+print("Roja: ", roja)
+print("Verde: ", verde)
+print("Azul: ", azul)
 ```
 </details>
 
@@ -1256,7 +1660,38 @@ print("Mujeres: ", mujeres)
 <summary>Pseudocódigo</summary>
 
 ```
-
+Algoritmo Obreros
+    Definir numObr, i Como Entero;
+    Definir horas, pagoHora, salario Como Real;
+	
+    i <- 1;
+	
+    Escribir "Numero de obreros: ";
+    Leer numObr;
+	
+    Repetir
+        Escribir "Horas trabajadas: ";
+        Leer horas;
+        Escribir "Pago por hora: ";
+        Leer pagoHora;
+		
+        Si horas <= 40 Entonces
+            salario <- horas * pagoHora;
+        Sino
+            extras <- horas - 40;
+			
+            Si extras <= 8 Entonces
+                salario <- 40*pagoHora + extras*(pagoHora*2);
+            Sino
+                salario <- 40*pagoHora + 8*(pagoHora*2) + (extras-8)*(pagoHora*3);
+            FinSi
+        FinSi
+		
+        Escribir "Salario:", salario;
+		
+        i <- i + 1;
+    Hasta Que i > n
+FinAlgoritmo
 ```
 </details>
 
@@ -1264,7 +1699,41 @@ print("Mujeres: ", mujeres)
 <summary>C++</summary>
 
 ```C++
+#include<iostream>
+using namespace std;
 
+int main() {
+    int numObr, i = 1;
+    float horas, pagoHora, salario, extras;
+
+    cout << "Numero de obreros: ";
+    cin >> numObr;
+
+    do {
+        cout << "Horas trabajadas: ";
+        cin >> horas;
+        cout << "Pago por hora: ";
+        cin >> pagoHora;
+
+        if(horas <= 40)
+            salario = horas * pagoHora;
+        else {
+            extras = horas - 40;
+
+            if(extras <= 8)
+                salario = 40*pagoHora + extras*(pagoHora*2);
+            else
+                salario = 40*pagoHora + 8*(pagoHora*2) + (extras-8)*(pagoHora*3);
+        }
+
+        cout << "Salario: $" << salario << endl;
+
+        i++;
+
+    } while(i <= n);
+
+    return 0;
+}
 ```
 </details>
 
@@ -1272,7 +1741,29 @@ print("Mujeres: ", mujeres)
 <summary>Python</summary>
 
 ```Python
+numObr = int(input("Numero de obreros: "))
 
+i = 1
+
+while True:
+    horas = float(input("Horas trabajadas: "))
+    pago = float(input("Pago por hora: "))
+
+    if horas <= 40:
+        salario = horas * pago
+    else:
+        extras = horas - 40
+
+        if extras <= 8:
+            salario = 40*pago + extras*(pago*2)
+        else:
+            salario = 40*pago + 8*(pago*2) + (extras-8)*(pago*3)
+
+    print("Salario: ", salario)
+
+    i += 1
+    if i > n:
+        break
 ```
 </details>
 
