@@ -559,7 +559,7 @@ print("Total a pagar:", total - descuento)
 ```
 </details>
 
-##### Ejercicio 10. Calcular el total que una persona debe pagar en una llantera, si el precio de cada llanta es de $ 800 si se compran menos de 5 llantas y de $700 si se compran 5 o más
+##### Ejercicio 10. Calcular el total que una persona debe pagar en una llantera, si el precio de cada llanta es de $800 si se compran menos de 5 llantas y de $700 si se compran 5 o más
 <details>
 <summary>Pseudocódigo</summary>
 
@@ -933,7 +933,28 @@ else:
 <summary>Pseudocódigo</summary>
 
 ```
+Algoritmo Obrero
+    Definir horas, pago, salario, extras Como Real;
 
+    Escribir "Horas trabajadas: ";
+    Leer horas;
+    Escribir "Pago por hora: ";
+    Leer pago;
+
+    Si horas <= 40 Entonces
+        salario <- horas * pago;
+    SiNo
+        extras <- horas - 40;
+
+        Si extras <= 8 Entonces
+            salario <- 40*pago + extras*(pago*2);
+        SiNo
+            salario <- 40*pago + 8*(pago*2) + (extras-8)*(pago*3);
+        FinSi
+    FinSi
+
+    Escribir "Salario:", salario;
+FinAlgoritmo
 ```
 </details>
 
@@ -941,7 +962,32 @@ else:
 <summary>C++</summary>
 
 ```C++
+#include<iostream>
+using namespace std;
 
+int main() {
+    float horas, pago, salario, extras;
+
+    cout << "Horas trabajadas: ";
+    cin >> horas;
+    cout << "Pago por hora: ";
+    cin >> pago;
+
+    if(horas <= 40)
+        salario = horas * pago;
+    else {
+        extras = horas - 40;
+
+        if(extras <= 8)
+            salario = 40*pago + extras*(pago*2);
+        else
+            salario = 40*pago + 8*(pago*2) + (extras-8)*(pago*3);
+    }
+
+    cout << "Salario: $" << salario;
+
+    return 0;
+}
 ```
 </details>
 
@@ -949,7 +995,20 @@ else:
 <summary>Python</summary>
 
 ```Python
+horas = float(input("Horas trabajadas: "))
+pago = float(input("Pago por hora: "))
 
+if horas <= 40:
+    salario = horas * pago
+else:
+    extras = horas - 40
+
+    if extras <= 8:
+        salario = 40*pago + extras*(pago*2)
+    else:
+        salario = 40*pago + 8*(pago*2) + (extras-8)*(pago*3)
+
+print("Salario:", salario)
 ```
 </details>
 
@@ -958,7 +1017,28 @@ else:
 <summary>Pseudocódigo</summary>
 
 ```
+Algoritmo Computadoras
+    Definir cantidad, precio, total, descuento Como Real;
 
+    Escribir "Cantidad de computadoras: ";
+    Leer cantidad;
+    Escribir "Precio unitario: ";
+    Leer precio;
+
+    total <- cantidad * precio;
+
+    Si cantidad < 5 Entonces
+        descuento <- total * 0.10;
+    SiNo
+        Si cantidad < 10 Entonces
+            descuento <- total * 0.20;
+        SiNo
+            descuento <- total * 0.40;
+        FinSi
+    FinSi
+
+    Escribir "Total a pagar:", total - descuento;
+FinAlgoritmo
 ```
 </details>
 
@@ -966,7 +1046,31 @@ else:
 <summary>C++</summary>
 
 ```C++
+#include<iostream>
+using namespace std;
 
+int main() {
+    int cantidad;
+    float precio, total, descuento;
+
+    cout << "Cantidad: ";
+    cin >> cantidad;
+    cout << "Precio unitario: ";
+    cin >> precio;
+
+    total = cantidad * precio;
+
+    if(cantidad < 5)
+        descuento = total * 0.10;
+    else if(cantidad < 10)
+        descuento = total * 0.20;
+    else
+        descuento = total * 0.40;
+
+    cout << "Total a pagar: $" << total - descuento;
+
+    return 0;
+}
 ```
 </details>
 
@@ -974,7 +1078,19 @@ else:
 <summary>Python</summary>
 
 ```Python
+cantidad = int(input("Cantidad: "))
+precio = float(input("Precio unitario: "))
 
+total = cantidad * precio
+
+if cantidad < 5:
+    descuento = total * 0.10
+elif cantidad < 10:
+    descuento = total * 0.20
+else:
+    descuento = total * 0.40
+
+print("Total a pagar:", total - descuento)
 ```
 </details>
 
@@ -986,7 +1102,36 @@ else:
 <summary>Pseudocódigo</summary>
 
 ```
+Algoritmo Juego
+    Definir r Como Caracter;
 
+    Escribir "¿Colon descubrio America? (S/N) ";
+    Leer r;
+
+    Si r = "S" Entonces
+
+        Escribir "¿La independencia de Mexico fue en 1810? (S/N)";
+        Leer r;
+
+        Si r = "S" Entonces
+
+            Escribir "¿The Doors fue un grupo de rock americano? (S/N)";
+            Leer r;
+
+            Si r = "S" Entonces
+                Escribir "Ganaste!";
+            SiNo
+                Escribir "Perdiste";
+            FinSi
+
+        SiNo
+            Escribir "Perdiste";
+        FinSi
+
+    SiNo
+        Escribir "Perdiste";
+    FinSi
+FinAlgoritmo
 ```
 </details>
 
@@ -994,7 +1139,38 @@ else:
 <summary>C++</summary>
 
 ```C++
+#include<iostream>
+using namespace std;
 
+int main() {
+    char r;
+
+    cout << "¿Colon descubrio America? (S/N): ";
+    cin >> r;
+
+    if(r == 'S' || r == 's') {
+
+        cout << "¿Independencia de Mexico en 1810? (S/N): ";
+        cin >> r;
+
+        if(r == 'S' || r == 's') {
+
+            cout << "¿The Doors grupo americano? (S/N): ";
+            cin >> r;
+
+            if(r == 'S' || r == 's')
+                cout << "Ganaste!";
+            else
+                cout << "Perdiste";
+        }
+        else
+            cout << "Perdiste";
+    }
+    else
+        cout << "Perdiste";
+
+    return 0;
+}
 ```
 </details>
 
@@ -1002,7 +1178,22 @@ else:
 <summary>Python</summary>
 
 ```Python
+r = input("¿Colon descubrio America? (S/N): ").lower()
 
+if r == "s":
+    r = input("¿Independencia de Mexico en 1810? (S/N): ").lower()
+
+    if r == "s":
+        r = input("¿The Doors grupo americano? (S/N): ").lower()
+
+        if r == "s":
+            print("Ganaste!")
+        else:
+            print("Perdiste")
+    else:
+        print("Perdiste")
+else:
+    print("Perdiste")
 ```
 </details>
 
