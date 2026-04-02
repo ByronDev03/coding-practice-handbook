@@ -6,21 +6,39 @@ EJERCICIOS DE BASE DE DATOS<br>
 ---
 
 ##### CREAR LA BASE DE DATOS
+<details>
+<summary>Solución</summary>
+
 ```sql
 CREATE DATABASE empresa_telefonica;
 ```
+</details>
+
 
 ##### MOSTRAR LA BASE DE DATOS
+<details>
+<summary>Solución</summary>
+
 ```sql
 SHOW DATABASE;
 ```
+</details>
+
 
 ##### USAR LA BASE DE DATOS
+<details>
+<summary>Solución</summary>
+
 ```sql
 USE empresa_telefonica;
 ```
+</details>
+
 
 ##### CREAR LA TABLA Y SUS CAMPOS
+<details>
+<summary>Solución</summary>
+
 ```sql
 CREATE TABLE user (
     user_id INT AUTO_INCREMENT  NOT NULL,
@@ -37,18 +55,32 @@ CREATE TABLE user (
     PRIMARY KEY (user_id)
 )ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 ```
+</details>
 
 ##### MOSTRAR LA TABLA
+<details>
+<summary>Solución</summary>
+
 ```sql
-SHOW TABLE;
+SHOW TABLES;
 ```
+</details>
+
 
 ##### MOSTRAR LAS CARACTERÍSTICAS DE LA TABLA
+<details>
+<summary>Solución</summary>
+
 ```sql
 DESCRIBE user;
 ```
+</details>
+
 
 ##### INSERCIÓN DE REGISTROS
+
+<details>
+<summary>Solución</summary>
 
 ```sql
 INSERT INTO user (username, nombre, sexo, nivel, email, telefono, marca, compania, saldo, activo)
@@ -74,6 +106,7 @@ VALUES ('BRE2271','BRENDA','M',2,'brenda@live.com','655-330-5736','SAMSUNG','IUS
 ('LUI1076','LUIS','H',3,'luis2@live.com','655-100-5085','SONY','UNEFON',150,1),
 ('HUG5441','HUGO','H',2,'hugo@live.com','655-137-3935','MOTOROLA','AT&T',500,1);
 ```
+</details>
 
 ---
 
