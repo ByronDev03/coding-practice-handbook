@@ -67,7 +67,7 @@ SHOW TABLES;
 </details>
 
 
-##### MOSTRAR LAS CARACTERÍSTICAS DE LA TABLA
+##### MOSTRAR LOS ATRIBUTOS DE LA TABLA
 <details>
 <summary>Solución</summary>
 
