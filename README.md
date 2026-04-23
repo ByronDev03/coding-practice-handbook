@@ -11,3 +11,6 @@
 - [Ejercicios de Base de Datos]()
     - [Empresa Telefónica](telephone-company-database.md)
     - [Tienda Informática](computer-store.md)
+
+- [Ejercicios de HTML]()
+    - [Tablas](tables.md)
