@@ -385,7 +385,7 @@
 
 ##### Ejercicio 6. Crea la siguiente tabla
 <div align="center">
-  <img src="/imgs/tabla6.png" width="1000" alt="tabla"/>
+  <img src="/imgs/tabla6.png" width="400" alt="tabla"/>
 </div>
 
 <details>
@@ -400,7 +400,7 @@
     <title>Ejercicio 6</title>
 </head>
 <body>
-    <table border="1" style="width: 100%">
+    <table border="1">
         <caption>Titulo de la tabla</caption>
         <colgroup>
             <col style="width: 20%"/>
@@ -439,3 +439,5 @@
 </html>
 ```
 </details>
+
+![alt text](image.png)
