@@ -2,7 +2,7 @@
 
 ---
 
-##### Ejercicio 1. Crea el siguiente horario de clases
+##### Ejercicio 1. Crea el siguiente horario de clases:
 <div align="center">
   <img src="/imgs/tabla1.png" width="600" alt="horario"/>
 </div>
@@ -221,7 +221,7 @@
 </details>
 
 
-##### Ejercicio 2. Crea la siguiente tabla
+##### Ejercicio 2. Crea la siguiente tabla:
 <div align="center">
   <img src="/imgs/tabla2.png" width="300" alt="tabla"/>
 </div>
@@ -255,7 +255,7 @@
 </details>
 
 
-##### Ejercicio 3. Crea la siguiente tabla con combinacion de columnas
+##### Ejercicio 3. Crea la siguiente tabla con combinacion de columnas:
 <div align="center">
   <img src="/imgs/tabla3.png" width="400" alt="tabla con combinación de columnas"/>
 </div>
@@ -299,7 +299,7 @@
 </details>
 
 
-##### Ejercicio 4. Crea la siguiente tabla con combinacion de filas
+##### Ejercicio 4. Crea la siguiente tabla con combinacion de filas:
 <div align="center">
   <img src="/imgs/tabla4.png" width="400" alt="tabla con combinación de filas"/>
 </div>
@@ -338,7 +338,7 @@
 </details>
 
 
-##### Ejercicio 5. Crea la siguiente tabla con combinacion de filas y columnas
+##### Ejercicio 5. Crea la siguiente tabla con combinacion de filas y columnas:
 <div align="center">
   <img src="/imgs/tabla5.png" width="300" alt="tabla combinada de filas y columas"/>
 </div>
@@ -383,7 +383,7 @@
 </details>
 
 
-##### Ejercicio 6. Crea la siguiente tabla
+##### Ejercicio 6. Crea la siguiente tabla:
 <div align="center">
   <img src="/imgs/tabla6.png" width="400" alt="tabla"/>
 </div>
@@ -440,4 +440,281 @@
 ```
 </details>
 
-![alt text](image.png)
+
+##### Ejercicio 7. Crea la siguiente tabla usa las fusiones de columnas y filas:
+<div align="center">
+  <img src="/imgs/tabla7.png" width="100" alt="tabla"/>
+</div>
+
+<details>
+<summary>Solución</summary>
+
+```HTML
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 7</title>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <td colspan="2">A</td>
+            <td>B</td>
+            <td>C</td>
+        </tr>
+        <tr>
+            <td rowspan="3">D</td>
+            <td colspan="2">E</td>
+            <td>F</td>
+        </tr>
+        <tr>
+            <td>G</td>
+            <td colspan="2">H</td>
+        </tr>
+        <tr>
+            <td>I</td>
+            <td>J</td>
+            <td>K</td>
+        </tr>
+    </table>
+</body>
+</html>
+```
+</details>
+
+
+#### Ejericicio 8. Crea una tabla con el siguinete aspecto:
+<div align="center">
+  <img src="/imgs/tabla8.png" width="150" alt="tabla medallas"/>
+</div>
+
+<details>
+<summary>Solución</summary>
+
+```HTML
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 8</title>
+</head>
+<body>
+    <table border="1">
+    <caption>Medallas olimpicas</caption>
+    <tr>
+        <th>Paises</th>
+        <th>Medallas</th>
+    </tr>
+    <tr>
+        <td>USA</td>
+        <td>13</td>
+    </tr>
+    <tr>
+        <td>China</td>
+        <td>25</td>
+    </tr>
+    <tr>
+        <td>España</td>
+        <td>3</td>
+    </tr>
+    <tr>
+        <td>Francia</td>
+        <td>6</td>
+    </tr>
+    </table>
+</body>
+</html>
+```
+</details>
+
+
+#### Ejericio 9. Crea la siguiente tabla:
+<div align="center">
+  <img src="/imgs/tabla9.png" width="300" alt="tabla pib"/>
+</div>
+
+<details>
+<summary>Solución</summary>
+
+```HTML
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 9</title>
+</head>
+<body>
+    <table border="1">
+    <tr>
+        <th>Mes</th>
+        <td>Enero</td>
+        <td>Febrero</td>
+        <td>Marzo</td>
+        <td>Abril</td>
+        <td>Mayo</td>
+        <td>Junio</td>
+    </tr>
+    <tr>
+        <th>PIB</th>
+        <td>0.2</td>
+        <td>0.4</td>
+        <td>0.2</td>
+        <td>0.3</td>
+        <td>0.1</td>
+        <td>0.2</td>
+    </tr>
+    <tr>
+        <th>PNIB</th>
+        <td>1.3</td>
+        <td>1.2</td>
+        <td>1.1</td>
+        <td>1.9</td>
+        <td>1.7</td>
+        <td>1.6</td>
+    </tr>
+    </table>
+</body>
+</html>
+```
+</details>
+
+
+#### Ejericio 10. Crea la siguiente tabla:
+<div align="center">
+  <img src="/imgs/tabla10.png" width="200" alt="tabla empleado"/>
+</div>
+
+<details>
+<summary>Solución</summary>
+
+```HTML
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 10</title>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <th>Empleado</th>
+            <th>Información</th>
+        </tr>
+
+        <tr>
+            <td>Juan</td>
+            <td>
+                <table border="1">
+                <tr>
+                    <td>Edad</td>
+                    <td>30</td>
+                </tr>
+                <tr>
+                    <td>Área</td>
+                    <td>Backend</td>
+                </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
+```
+</details>
+
+
+#### Ejericio 11. Crea la siguiente tabla:
+<div align="center">
+  <img src="/imgs/tabla11.png" width="300" alt="tabla promedio"/>
+</div>
+
+<details>
+<summary>Solución</summary>
+
+```HTML
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 11</title>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <th rowspan="2">Alumno</th>
+            <th colspan="3">Calicaciones</th>
+        </tr>
+        <tr>
+            <th>Español</th>
+            <th>Matematicas</th>
+            <th>Promedio</th>
+        </tr>
+        <tr>
+            <td>Mario</td>
+            <td>10</td>
+            <td>8</td>
+            <td>9</td>
+        </tr>
+    </table>
+</body>
+</html>
+```
+</details>
+
+#### Ejericio 12. Crea la siguiente tabla:
+<div align="center">
+  <img src="/imgs/tabla12.png" width="300" alt="tabla productos"/>
+</div>
+
+<details>
+<summary>Solución</summary>
+
+```HTML
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 12</title>
+</head>
+<body>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Producto</th>
+                <th>Precio</th>
+                <th>Cantidad</th>
+                <th>Total</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Laptop</td>
+                <td>10,000</td>
+                <td>2</td>
+                <td>20,000</td>
+            </tr>
+            <tr>
+                <td>Mouse</td>
+                <td>200</td>
+                <td>3</td>
+                <td>600</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3"><strong>Total General</strong></td>
+                <td><strong>20,600</strong></td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>
+```
+</details>
