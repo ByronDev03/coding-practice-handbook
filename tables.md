@@ -1,8 +1,10 @@
 <h1 align="center">EJERCICIOS DE TABLAS EN HTML5</h1>
 
-##### Ejercicio 1. Recrea el siguinte horario de clases
+---
+
+##### Ejercicio 1. Crea el siguiente horario de clases
 <div align="center">
-  <img src="/imgs/horario1.png" width="600" alt="Diagrama cliente-servidor" />
+  <img src="/imgs/tabla1.png" width="600" alt="horario"/>
 </div>
 
 <details>
@@ -212,6 +214,226 @@
             <td align="center">1</td>
             <td align="center">Ing. </td>
     	</tr> 
+    </table>
+</body>
+</html>
+```
+</details>
+
+
+##### Ejercicio 2. Crea la siguiente tabla
+<div align="center">
+  <img src="/imgs/tabla2.png" width="300" alt="tabla"/>
+</div>
+
+<details>
+<summary>Solución</summary>
+
+```HTML
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2</title>
+</head>
+<body>
+    <table border="1">
+        <caption>Titulo de la tabla</caption>
+        <tr>
+            <th>Col.Cab 1</th>
+            <th>Col.Cab 2</th>
+        </tr>
+        <tr>
+            <td>Celda 1</td>
+            <td>Celda 2</td>
+        </tr>
+    </table>
+</body>
+</html>
+```
+</details>
+
+
+##### Ejercicio 3. Crea la siguiente tabla con combinacion de columnas
+<div align="center">
+  <img src="/imgs/tabla3.png" width="400" alt="tabla con combinación de columnas"/>
+</div>
+
+<details>
+<summary>Solución</summary>
+
+```HTML
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3</title>
+</head>
+<body>
+    <table border="1">
+        <caption>Tabla con combinación de columnas</caption>
+        <tr>
+            <th colspan="2">Celda Combinada</th>
+            <th>Celda Normal</th>
+            <th colspan="2">Celda Combinada</th>
+        </tr>
+        <tr>
+            <td>C1</td>
+            <td>C2</td>
+            <td>C3</td>
+            <td>C4</td>
+            <td>C5</td>
+        </tr>
+        <tr>
+            <td>C6</td>
+            <td>C7</td>
+            <td>C8</td>
+            <td colspan="2">C9 Comb.</td>
+        </tr>
+    </table>
+</body>
+</html>
+```
+</details>
+
+
+##### Ejercicio 4. Crea la siguiente tabla con combinacion de filas
+<div align="center">
+  <img src="/imgs/tabla4.png" width="400" alt="tabla con combinación de filas"/>
+</div>
+
+<details>
+<summary>Solución</summary>
+
+```HTML
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 4</title>
+</head>
+<body>
+    <table border="1">
+        <caption>Tabla con combinación de filas</caption>
+        <tr>
+            <th>Celda 1</th>
+            <th>Celda 2</th>
+            <th>Celda 3</th>
+        </tr>
+        <tr>
+            <td rowspan="2">Celda combinada</td>
+            <td>Celda 5</td>
+            <td rowspan="2">Celda combinada</td>
+        </tr>
+        <tr>
+            <td>Celda 7</td>
+        </tr>
+    </table>
+</body>
+</html>
+```
+</details>
+
+
+##### Ejercicio 5. Crea la siguiente tabla con combinacion de filas y columnas
+<div align="center">
+  <img src="/imgs/tabla5.png" width="300" alt="tabla combinada de filas y columas"/>
+</div>
+
+<details>
+<summary>Solución</summary>
+
+```HTML
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 5</title>
+</head>
+<body>
+    <table border="1">
+        <caption>Tabla con combinación de filas y columnas</caption>
+        <tr>
+            <th>Celda 1</th>
+            <th>Celda 2</th>
+            <th>Celda 3</th>
+            <th>Celda 4</th>
+        </tr>
+        <tr>
+            <td rowspan="3">Celda 5</td>
+            <td>Celda 6</td>
+            <td colspan="2">Celda 7</td>
+        </tr>
+        <tr>
+            <td>Celda 8</td>
+            <td>Celda 9</td>
+            <td rowspan="2">Celda 10</td>
+        </tr>
+        <tr>
+            <td colspan="2">Celda 11</td>
+        </tr>
+    </table>
+</body>
+</html>
+```
+</details>
+
+
+##### Ejercicio 6. Crea la siguiente tabla
+<div align="center">
+  <img src="/imgs/tabla6.png" width="1000" alt="tabla"/>
+</div>
+
+<details>
+<summary>Solución</summary>
+
+```HTML
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 6</title>
+</head>
+<body>
+    <table border="1" style="width: 100%">
+        <caption>Titulo de la tabla</caption>
+        <colgroup>
+            <col style="width: 20%"/>
+            <col style="width: 40%"/>
+            <col style="width: 60%"/>
+        </colgroup>
+        <thead>
+            <tr>
+                <th rowspan="2">Tabla Avanzada</th>
+                <th colspan="2">Cabecera Múltiples Columnas</th>
+            </tr>
+            <tr>
+                <th>Primera Col. Cab.</th>
+                <th>Segunda Col. Cab.</th>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <td colspan="3">Pie de Tabla.</td>
+            </tr>
+        </tfoot>
+        <tbody>
+            <tr>
+                <th>Fila 1</th>
+                <td>Fila 1 Columna 1</td>
+                <td>Fila 1 Columna 2</td>
+            </tr>
+            <tr>
+                <th>Fila 2</th>
+                <td>Fila 2 Columna 1</td>
+                <td>Fila 2 Columna 2</td>
+            </tr>
+        </tbody>
     </table>
 </body>
 </html>

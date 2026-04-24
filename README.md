@@ -14,3 +14,4 @@
 
 - [Ejercicios de HTML]()
     - [Tablas](tables.md)
+    - [Formularios](forms.md)
